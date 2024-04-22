@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Personal Portfolio</title>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="./images/large_logo.png" alt="" class="logo" />
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p></p>
+          <h1>Hi, I'm <span>Mamun</span></h1>
+          <p>Problem solver & Developer</p>
+        </div>
+      </div>
+    </div>
+
+    <!--------------About Me-------------------->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="./images/about-me-pic.jpeg" alt="" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              Hi! I'm Mamun Miah, from Sonargaon, Narayanganj. </br>
+              I went to Sonmandi Hasan Khan High School for my SSC.Then, I did my HSC at Govt. Science College in Tejgaon. That's where I fell in love with computer science.
+            </br>Now, I'm studying Computer Science and Engineering at the University of Rajshahi. I want to become a software engineer and create cool things with technology.
+            I'm always eager to learn and explore new ideas.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+              <p class="tab-links" onclick="opentab('skills')">Skills</p>
+            </div>
+            <div class="tab-contents active-tab" id="education">
+              <ul>
+                <li>
+                  <span>2019 - Current</span><br />
+                  Student of Computer Science and Enginnering, University of
+                  Rajshahi.
+                </li>
+                <li>
+                  <span>2016 - 2018</span><br />
+                  Studied HSC at Govt. Science College.
+                </li>
+                <li>
+                    <span>2016</span><br />
+                    Completed SSC from Sanmandi Hasan Khan High School.
+                  </li>
+              </ul>
+              </div>
+              <div class="tab-contents " id="skills">
+              <ul>
+                <li>
+                  <span>Problem Solver</span><br />
+                  I do solve problem in various online judge.
+                </li>
+                <li>
+                  <span>Web developer</span><br />
+                  Web app Development.
+                </li>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------------portfolio------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My works</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="./images/eeg.png" alt="">
+                    <div class="layer">
+                      <h3>Artifact Suppresion</h3>
+                      <p>Using deep learning approach artifacts suppresion from eeg signal.</p>
+                      <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname)
+        {
+            for(tablink of tablinks)
+            {
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+  </body>
+</html>
